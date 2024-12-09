@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code Generator and Reader</title>
+    <link rel="icon" href="./images/qr-code_9129505.png">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper1">
+            <header>
+                <h1>QR Code Generator</h1>
+            </header>
+            <div class="form">
+                <input type="text" placeholder="Enter text or URL">
+                <button>Generate QR Code</button>
+            
+                <div class="qr-code">
+                    <img src="" alt="">
+                </div>
+                <a href="#" class="saveQR" download>Download QR</a>
+            </div>
+        </div>
+        <div class="wrapper2">
+            <form action="#">
+                <input type="file" hidden>
+                <img src="" alt="qr-code">
+                <div class="content">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Upload QR code to Scan</p>
+                </div>
+            </form>
+            <div class="details">
+                <textarea disabled></textarea>
+                <div class="buttons">
+                    <button class="close" type="button">Close</button>
+                    <button class="copy" type="button">Copy Text</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="qrcode.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

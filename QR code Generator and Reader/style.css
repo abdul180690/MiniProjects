@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #B1F0F7;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+.wrapper1{
+    margin: 0px 20px 0px 20px;
+    text-align: center;
+    height: 270px;
+    background: #fff;
+    width: 420px;
+    border-radius: 10px;
+    padding: 16px 25px;
+    transition: height 0.5s ease;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+}
+.wrapper1.active{
+    height: 560px;
+    margin: 10PX;
+}
+header h1 {
+    padding: 5px;
+    font-size: 21px;
+    font-weight: 900;
+    color: #931730;
+}
+
+header p {
+    margin-top: 5px;
+    color: #474747;
+    font-size: 16px;
+}
+.wrapper1 .form {
+    margin: 20px 0 30px;
+}
+.form :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.form input {
+    font-size: 18px;
+    padding: 0 17px;
+    border: 1px solid #999;
+}
+.form button {
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+    background-color: #3498DB;
+}
+.wrapper1 .qr-code {
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 33px 0;
+    border: 1px solid #3498DB;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+.wrapper1 .qr-code img{
+    width: 200px;
+}
+
+.wrapper1.active .qr-code {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.5s ease;
+}
+.form .saveQR{
+    opacity: 0;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 55px;
+    background: #3498DB;
+    color: white;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+.wrapper1.active .form .saveQR {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.5s ease-in;
+}
+/* --------------------QR Reader--------------- */
+.wrapper2 {
+    width: 420px;
+    height: 270px;
+    border-radius: 10px;
+    background-color: #3498DB;
+    padding: 30px 30px 35px;
+    margin: 0px 20px 0px 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+    transition: height 0.5s ease;
+}
+.wrapper2.active{
+    height: 560px;
+    margin: 10px;
+}
+.wrapper2 form{
+    height: 210px;
+    cursor: pointer;
+    background-color: #fff;
+    display: flex;
+    text-align: center;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    color: #3498DB;
+    transition: height 0.5s ease;
+}
+.wrapper2.active form{
+    height: 225px;
+    pointer-events: none;
+}
+form img{
+    display: none;
+    max-width: 148px;
+    padding: 10px;
+}
+.wrapper2.active form img{
+    display: block;
+}
+
+form .content i{
+    color: #3498DB;
+    font-size: 36px;
+    margin-top: 15px;
+}
+form .content p{
+    color: #3498DB;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 15px;
+}
+.wrapper2 .details{
+    opacity: 0;
+    pointer-events: none;
+    margin-top: 25px;
+}
+.wrapper2.active .details{
+     opacity: 1;
+     pointer-events: auto;
+     transition: opacity 0.5s 0.5s ease;
+}
+.details textarea{
+    width: 100%;
+    height: 128px;
+    outline: none;
+    background: none;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+}
+.details .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.buttons button{
+    height: 55px;
+    outline: none;
+    border: none;
+    color: #3498DB;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    width: calc(100% / 2 - 10px);
+    cursor: pointer;
+}

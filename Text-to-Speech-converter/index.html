@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech converter</title>
+    <link rel="icon" href="./images/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        
+        <label class="btn" id="btn" onclick="show()">Speak to write</label>
+        <div class="container" id="container">
+            <h2 id="close"><span>&#10005;</span></h2>
+            <p>Click the mic and speek</p>
+            <img src="./images/microphone.png" class="mic" alt="mic" width="50px" height="50px" onclick="start1()">
+            <p id="res"></p>
+        </div>
+        <h2>Speech - Text - Speech Converter </h2>
+        <textarea name="" id="output" placeholder="Write anything here..."></textarea>
+        <div class="row">
+            <select name="voice" id=""></select>
+            <button><img src="./images/play.png" alt="">Listen</button>
+            <!-- <label for="pause" class="control"><img src="./images/pause.png" alt="">Pause</label>
+            <label for="stop" class="control"><img src="./images/stop.png" alt="">Stop</label> -->
+           
+        </div>
+        <div id="rate-control">
+            <label for="rate">Rate:</label>
+            <input type="range" min="0.3" max="2" value="1" step="0.1" id="rate" />
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
